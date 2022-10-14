@@ -12,7 +12,6 @@ public class potatoMgr : MonoBehaviour
 
     public int jumpcount;
     public int maxJumpCount = 2;
-    public bool isGround = true;
 
     Rigidbody2D rb;
     // Start is called before the first frame update
@@ -22,36 +21,16 @@ public class potatoMgr : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
-        moveX = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        //moveX = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
-        rb.velocity = new Vector2(moveX, rb.velocity.y);
+        //rb.velocity = new Vector2(moveX, rb.velocity.y);
 
-
-        transform.Rotate(new Vector3(0, 0, -(transform.rotation.z + moveSpeed) * Input.GetAxisRaw("Horizontal")));
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-
-
-        Debug.DrawRay(rb.position, Vector3.down, new Color(1, 0, 1));
-
-
-        RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, rayleng, LayerMask.GetMask("Platform"));
-
-        if (rayHit.collider != null)
-        {
-            Debug.Log(rayHit.collider.name);
-        }
-
-        if (rayHit.collider.tag == "Ground")
-        {
-            jumpcount = 0;
-        }
+        transform.Rotate(new Vector3(0, 0, -(transform.rotation.z + (moveSpeed / 2)) * Input.GetAxisRaw("Horizontal")));
 
     }
+
+   
 }
