@@ -6924,9 +6924,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: b828cf5f5d00b7a458cebad08cb9a07c, type: 3}
         m_TargetAssemblyTypeName: gmgr, Assembly-CSharp
-        m_MethodName: Gomane
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7643,7 +7643,7 @@ GameObject:
   - component: {fileID: 2007264899}
   m_Layer: 0
   m_Name: Square (51)
-  m_TagString: Finish
+  m_TagString: end
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
